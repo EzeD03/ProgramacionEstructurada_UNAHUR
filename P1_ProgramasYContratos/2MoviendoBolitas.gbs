@@ -1,0 +1,12 @@
+//Escribir un programa que mueva una bolita de color Negro de la celda actual a la celda vecina al Este, dejando el cabezal en la celda lindante al Este.
+
+program {
+    /*
+        PROPÓSITO:  Mover una bolita de color negro de una posición a otra al Este.
+        PRECONDICIONES:
+            * Debe haber al menos una celda lindante al Este. Debe haber al menos una bolita en la celda actual.
+    */
+    Sacar(Negro)
+    Mover(Este)
+    Poner(Negro)
+}

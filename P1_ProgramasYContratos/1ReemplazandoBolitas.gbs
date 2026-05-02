@@ -1,0 +1,13 @@
+// Escribir un programa que reemplace una bolita de color Roja con otra de color Verde en la celda actual. 
+// Pruebe su programa en la computadora, modificando el tablero inicial de forma que el programa funcione satisfactoriamente.
+
+program {
+    /*
+        PROPÓSITO:  
+            * Reemplazar una bolita roja por una verde.
+        PRECONDICIONES:
+            * Debe haber una bolita roja en la caja.
+    */
+    Sacar(Rojo)
+    Poner(Verde)
+}

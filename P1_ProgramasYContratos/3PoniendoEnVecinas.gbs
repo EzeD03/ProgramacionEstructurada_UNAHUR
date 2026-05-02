@@ -1,0 +1,12 @@
+// Escribir un programa que ponga una bolita de color Azul en la celda vecina al Norte de la actual.
+
+program {
+    /*
+        PROPÓSITO:  Mueve el cabezal al norte y coloca una bolita de color Azul.
+        PRECONDICIONES:
+            * Debe haber una celda lindante al norte.
+    */
+    Mover(Norte)
+    Poner(Azul)
+    Mover(Sur)
+}

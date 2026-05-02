@@ -1,0 +1,43 @@
+* Los siguientes programas resuelven incorrectamente el ejercicio anterior de esta práctica. Para
+cada uno de ellos, explicar por qué no son correctos. Comparar con la solución dada para el ejercicio anterior.
+
+A
+program {
+    Mover(Norte)
+    Poner(Azul)
+}
+
+B
+program {
+    Poner(Azul)
+    Mover(Este)
+    Mover(Oeste)
+}
+
+C
+program {
+    Mover(Norte)
+    Poner(Verde)
+    Mover(Sur)
+}
+
+D
+program {
+    Poner(Azul)
+    Mover(Norte)
+    Mover(Sur)
+}
+
+Situación A:
+    - En la primer situación, el programa ejecuta correctamente la acción de colocar una bolita Azul en la celda al Norte de la actual, pero NO REGRESA EL CABEZAL A LA CELDA INICIAL luego de ejecutar su acción.
+    # Dada la cuestión, se entiende que el problema solicitaba que el cabezal debía iniciar y terminar en la misma posición. En el ejercicio original no se solicita. 
+
+Situación B:
+    - En la segunda situación, se coloca por error la bolita azul primero, luego realiza el movimiento de cabezal y el mismo se mueve erróneamente hacia las posiciones Este y Oeste difiriendo de lo solicitado.
+
+Situación C:
+    - En la tercer situación, se realizan las acciones de movimiento correctamente (Mover, Poner, Mover de regreso) pero comete el error de colocar una bolita de diferente color al solicitado.
+
+Situación D:
+    - En la cuarta situación, el color de la bolita es correcto pero las acciones de movimiento y colocación son incorrectas (Poner, Mover, Mover de regreso).
+

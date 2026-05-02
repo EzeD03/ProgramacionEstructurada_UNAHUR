@@ -1,0 +1,47 @@
+* Dado el siguiente programa:
+
+program {
+    Poner(Verde)
+    Sacar(Verde)
+    Poner(Azul)
+    Poner(Rojo)
+}
+
+Diversos estudiantes realizaron propuestas para redactar su propósito, y también un profesor realizó
+explicaciones sobre cada una de estas propuesta. Asociar cada propuesta de propósito para el mismo
+(indicadas con las letras A, B, etc.) con la explicación que resulta correcta para dicha propuesta (indicadas con los números 1, 2, etc.)
+
+
+(A) Poner una bolita
+azul y luego una roja en la
+celda actual.
+(5) Es una forma incorrecta de indicar la transformación esperada. Utiliza
+un lenguaje que sugiere un pensamiento operacional (o sea, centrado en
+las acciones individuales antes que en la transformación esperada).
+
+(C) Pone una bolita
+verde y luego la saca, para
+a continuación poner una
+bolita azul y una roja.
+(1) No es un propósito, sino una descripción del funcionamiento. Para ser
+un propósito no debe preocuparse de los estados intermedios,
+solamente de la transformación final.
+
+(D) Agregar una bolita
+roja y una bolita azul en la
+celda actual.
+(3) Es una enunciación correcta del propósito. El orden en que se
+agregan las bolitas es irrelevante, siempre que la celda actual finalice con
+una más de cada uno de los colores indicados.
+
+(B) Agregar una bolita
+azul y una roja.
+(4) Es un propósito incompleto, ya que no establece dónde se agregan
+las bolitas en cuestión. El propósito debe establecer con precisión la
+transformación esperada.
+
+(E) Agregar dos
+bolitas en la celda actual.
+(2) Es un propósito incompleto ya que no establece los colores de las
+bolitas que se agregan. El propósito debe establecer con precisión la
+transformación esperada.
