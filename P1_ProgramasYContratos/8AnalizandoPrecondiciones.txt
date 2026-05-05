@@ -1,0 +1,64 @@
+La solución propuesta por diversos estudiantes para el punto c, del ejercicio anterior, fue corregida
+por los docentes. Sin embargo, las correcciones se mezclaron, y hay que juntar cada corrección con su
+precondición correspondiente.
+
+(A) Debe haber al menos una
+celda al Norte y otra al Sur, y dos
+celdas al Este y otras dos al Oeste
+de la celda actual.
+(2) Es una precondición correcta, pues establece las condiciones
+mínimas necesarias para que el programa funcione, y define con
+precisión el conjunto de tableros iniciales que sirven.
+
+(B) El rectángulo va a representar
+a una ventana en el dibujo de una
+casa.
+(7) No es una precondición, sino una explicación de la tarea. Una
+precondición debe hablar sobre los tableros iniciales y no sobre
+las características de lo que se va a realizar.
+
+(C) El tablero debe tener 3 o más
+filas, y 5 o más columnas, y el
+cabezal debe estar al menos a
+una celda de distancia de los
+bordes Norte y Sur, y a dos celdas
+de distancia de los bordes Este y
+Oeste.
+(3) Es otra forma de enunciar correctamente la precondición:
+todos los tableros del conjunto que la satisfacen sirven, y todos
+los que no la satisfacen no sirven. Sin embargo, especificar las
+dimensiones del tablero es innecesario, pues son las distancias a
+los bordes lo relevante para que el programa no falle
+
+(D) Debe haber lugar suficiente en
+las direcciones adecuadas.
+(6) No es una precondición, sino una aclaración. Una precondición
+debe hablar sobre los tableros iniciales y no sobre el dominio del
+problema.
+
+(E) Se van a colocar 35 bolitas de
+color Negro.
+(5) Es una precondición insuficiente, pues es demasiado vaga y
+no permite determinar cuáles son los tableros que sirven.
+
+
+(F) El tablero debe tener 3 filas y 5
+columnas y el cabezal estar
+ubicado en el centro del mismo.
+(4) Es una precondición correcta pero insuficiente, pues todos los
+tableros que la satisfacen sirven, pero hay muchos tableros que
+sirven que no la satisfacen.
+
+(G) El tablero debe ser de 3 filas
+por 5 columnas.
+(1) Es una precondición incorrecta, pues al no establecer dónde
+debe ubicarse el cabezal hay tableros de ese tamaño que no
+sirven.
+
+--------------------------------------
+
+
+
+
+
+

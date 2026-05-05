@@ -1,0 +1,23 @@
+// Escribir un programa que ponga un “arco iris”, poniendo una bolita Azul en la celda actual, una
+// Negra en la celda siguiente al Este, una Roja en la siguiente al Este, y una Verde en la siguiente al Este, dejando
+// el cabezal en la celda inicial.
+
+program {
+    /*
+        PROPÓSITO:  Pone una serie de 4 bolitas de colores, una celda por cada color en dirección Este, formando un arcoiris.
+        PRECONDICIONES:
+            * El tablero está vacío. El programa empieza en la posición (0,0) mirando hacia el Este.
+    */
+    Poner(Azul)
+    Mover(Este)
+    Poner(Negro)
+    Mover(Este)
+    Poner(Rojo)
+    Mover(Este)
+    Poner(Verde)
+    Mover(Oeste)
+    Mover(Oeste)
+    Mover(Oeste)
+}
+
+

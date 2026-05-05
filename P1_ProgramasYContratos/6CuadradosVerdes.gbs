@@ -1,6 +1,49 @@
+//program {
+//    /*
+//        PROPÓSITO:  Coloca un cuadrado con bolitas verdes de tamaño 3x3 en la posición (1,1) del tablero.
+//    */
+//    Poner(Verde)
+//    Mover(Norte)
+//    Poner(Verde)
+//    Mover(Este)
+//    Poner(Verde)
+//    Mover(Sur)
+//    Poner(Verde)
+//    Mover(Sur)
+//    Poner(Verde)
+//    Mover(Oeste)
+//    Poner(Verde)
+//    Mover(Oeste)
+//    Poner(Verde)
+//    Mover(Norte)
+//    Poner(Verde)
+//    Mover(Norte)
+//    Poner(Verde)
+//    Mover(Este)
+//    Mover(Sur)
+//}
+
 program {
     /*
-        PROPÓSITO:  Coloca un cuadrado con bolitas verdes de tamaño 3x3 en la posición (1,1) del tablero.
+        PROPÓSITO:  Quita un cuadrado con bolitas verdes de tamaño 3x3 en la posición (1,1) del tablero.
     */
-    
+    Sacar(Verde)
+    Mover(Norte)
+    Sacar(Verde)
+    Mover(Este)
+    Sacar(Verde)
+    Mover(Sur)
+    Sacar(Verde)
+    Mover(Sur)
+    Sacar(Verde)
+    Mover(Oeste)
+    Sacar(Verde)
+    Mover(Oeste)
+    Sacar(Verde)
+    Mover(Norte)
+    Sacar(Verde)
+    Mover(Norte)
+    Sacar(Verde)
+    Mover(Este)
+    Mover(Sur)
 }

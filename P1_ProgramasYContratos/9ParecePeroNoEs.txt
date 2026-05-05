@@ -1,0 +1,12 @@
+A continuación hay una serie de precondiciones que un alumno escribió en un examen. Las mismas son todas
+incorrectas por el mismo motivo. ¿Puede adivinar por qué son incorrectas? Justifique claramente su
+respuesta.
+
+a. Se está escribiendo código Gobstones.
+b. El cabezal se encuentra en la celda actual.
+c. Existe una celda en el tablero.
+d. Existe un tablero.
+e. El cabezal existe y está en la celda actual.
+
+Las respuestas son incorrectas debido a que no desarrolla ninguna precondición consiza sobre el programa pero declara precondiciones lo mínimo y redundante a usar.
+O sea, pide lo básico que ya se otorga al programar (un tablero y una celda con cabezal.)

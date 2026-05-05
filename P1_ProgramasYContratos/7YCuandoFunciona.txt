@@ -1,0 +1,12 @@
+*Discutir en clase cuáles serı́an las precondiciones para programas cuyo propósito sea:
+
+a_ Poner 1000 bolitas color Azul en la celda actual.
+b_ Poner una bolita color Rojo en la celda lindante al Este de la celda actual y sacar una bolita Azul de la
+celda lindante al Oeste de la celda actual.
+c_ Poner un rectángulo de bolitas negras cuyo tamaño sea 3 filas y 5 columnas, centrado en la celda actual.
+
+A_ En el primer caso no se presenta PRECONDICION ya que lo solicitado es no dependiente de eventos previos.
+
+B_ Ya en el segundo caso, la PRECONDICION que presenta es que se necesita tener tanto una celda lindante al ESTE y al OESTE, como así que en la celda del OESTE haya mínimo una bolita Azul.
+
+C_ Por último, en el último caso, requiere como PRECONDICION que a partir de la celda actual, haya tanto una celda al Norte y al Sur, como dos celdas al Este y al Oeste.

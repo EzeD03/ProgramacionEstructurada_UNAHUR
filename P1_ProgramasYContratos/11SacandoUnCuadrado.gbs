@@ -1,0 +1,27 @@
+program {
+    /*
+        PROPÓSITO:  Quita un cuadrado de 2x2 con 1 bolita de cada color en cada celda, ubicado en la posición (0,0) del tablero.
+        PRECONDICIONES:
+            * El tablero debe tener un cuadrado de 2x2 con 1 bolita de cada color en cada celda, ubicado en la posición (0,0) del tablero. El programa empieza en la posición (0,0).
+    */
+    Sacar(Azul)
+    Sacar(Negro)
+    Sacar(Rojo)
+    Sacar(Verde)
+    Mover(Este)
+    Sacar(Azul)
+    Sacar(Negro)
+    Sacar(Rojo)
+    Sacar(Verde)
+    Mover(Norte)
+    Sacar(Azul)
+    Sacar(Negro)
+    Sacar(Rojo)
+    Sacar(Verde)
+    Mover(Oeste)
+    Sacar(Azul)
+    Sacar(Negro)
+    Sacar(Rojo)
+    Sacar(Verde)
+    Mover(Sur)
+}
