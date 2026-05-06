@@ -1,0 +1,94 @@
+/*
+En el ejercicio anterior se trabajó con una metodología conocida como top-down: se comienza desde el
+problema, y se lo va descomponiendo en tareas cada vez más pequeñas, hasta llegar al uso de comandos
+primitivos. En este ejercicio vamos a proponer la estrategia inversa, bottom-up: primero se escriben los
+procedimientos elementales, y luego se van armando procedimientos cada vez más complejos, hasta
+construir uno que resuelva el problema original.
+
+Escribir los siguientes procedimientos en el orden dado. Recuerde escribir los contratos correspondientes.
+
+a) BIBLIOTECA. PonerUnaDeCada() que ponga una bolita de cada color en la celda actual.
+b) Mover3VecesAlOeste() que mueva el cabezal tres celdas hacia el Oeste.
+c) DibujarLíneaMulticolorDeLargo4() que ponga una línea de cuatro celdas hacia el Este en la que cada
+celda tenga una bolita de cada color. El cabezal debe quedar en la celda inicial. Para ello, debe reutilizar
+los procedimientos PonerUnaDeCada() y Mover3VecesAlOeste() (realizados en ejercicios anteriores).
+d) DibujarCuadradoMulticolorDeLado4() que ponga un cuadrado sólido de 4 × 4 celdas en la que cada celda
+tenga una bolita de cada color. El cabezal debe quedar en la celda inicial. Para ello, debe reutilizar el
+procedimiento DibujarLíneaMulticolorDeLargo4().
+e) Reflexionar sobre las diferencias entre ambas metodologías. ¿Cuál de las dos metodologías es más
+sencilla si no tenemos ninguna pista de cómo resolver el problema? ¿Qué se requiere para poder utilizar
+una estrategia bottom-up? ¿Cuál metodología es más utilizada y por qué?
+*/
+
+procedure PonerUnaDeCada(){
+    /*
+        Propósito:
+            Poner una bolita de cada color en la celda actual.
+        Precondiciones:
+            * La celda actual debe estar vacía o preparada para recibir las bolitas de colores.
+    */
+    Poner(Verde)
+    Poner(Rojo)
+    Poner(Azul)
+    Poner(Negro)
+}
+
+procedure Mover3VecesAlOeste(){
+    /*
+        Propósito:
+            Mover el cabezal tres celdas hacia el Oeste.
+        Precondiciones:
+            * Hay al menos 3 celdas al Oeste de la celda actual.
+    */
+
+    Mover(Oeste)
+    Mover(Oeste)
+    Mover(Oeste)
+}
+
+procedure DibujarLineaMulticolorDeLargo4(){
+    /*
+        Propósito:
+            Poner una línea de cuatro celdas hacia el Este en la que cada celda tenga una bolita de cada color.
+        Precondiciones:
+            * Hay al menos 3 celdas al Este de la celda actual.
+    */
+    PonerUnaDeCada()
+    Mover(Este)
+    PonerUnaDeCada()
+    Mover(Este)
+    PonerUnaDeCada()
+    Mover(Este)
+    PonerUnaDeCada()
+    IrAlBorde(Oeste)
+}
+
+procedure DibujarCuadradoMulticolorDeLado4() {
+    /*
+        PROPÓSITO:  
+            Poner un cuadrado sólido de 4 × 4 celdas en la que cada celda tenga una bolita de cada color.
+        PRECONDICIONES:
+            * El tablero debe estar vacío o preparado para recibir las bolitas de colores antes de ejecutar el procedimiento.
+            * Hay al menos 3 celdas al Este y 3 celdas al Norte de la celda actual.
+    */
+    DibujarLineaMulticolorDeLargo4()
+    Mover(Norte)
+    DibujarLineaMulticolorDeLargo4()
+    Mover(Norte)
+    DibujarLineaMulticolorDeLargo4()
+    Mover(Norte)
+    DibujarLineaMulticolorDeLargo4()
+    IrAlBorde(Sur)
+    IrAlBorde(Oeste)
+}
+
+program {
+    /*
+        PROPÓSITO:  
+            Coloca un cuadrado sólido de 4 × 4 celdas en la que cada celda tenga una bolita de cada color.
+        PRECONDICIONES:
+            * El tablero debe estar vacío o preparado para recibir las bolitas de colores antes de ejecutar el procedimiento.
+            * Hay al menos 3 celdas al Este y 3 celdas al Norte de la celda actual.
+    */
+    DibujarCuadradoMulticolorDeLado4()
+}

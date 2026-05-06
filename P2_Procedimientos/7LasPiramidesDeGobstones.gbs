@@ -1,0 +1,189 @@
+/*
+Escribir un programa para cumplir con los propósitos de cada uno de los ítems que se indican más
+adelante. Para ello, deben utilizarse los procedimientos indicados a continuación.
+
+    procedure DibujarBase()
+        Prop.
+        Dibuja una base de pirámide de 5 celdas de lado
+        Prec.
+        La celda actual debe estar vacía
+        Debe haber cuatro celdas vacías al Este del cabezal
+    procedure DibujarMedio()
+        Prop.
+        Dibuja un sector del medio de pirámide de 3 celdas de lado
+        Prec.
+        La celda actual debe estar vacía
+        Debe haber dos celdas vacías al Este del cabezal
+    procedure DibujarPunta()
+        Prop.
+        Dibuja una punta de pirámide
+        Prec.
+        La celda actual debe estar vacía
+
+¡Recordar! Para cada ítem que sigue debe comenzarse redactando el contrato correspondiente, y de ser
+necesario, se deben definir subtareas para construir su solución, expresándose mediante procedimientos (y en
+ese caso se deben escribir primero los contratos de los mismos y utilizarlos ANTES de dar su código).
+a) Una pirámide.
+b) Una pirámide invertida.
+c) Una pirámide estirada a lo alto (con dos segmentos de cada uno).
+d) Una pirámide gigante (con 11 bloques de base y 6 bloques de altura, donde cada segmento es dos celdas
+más chico que el que tiene debajo). Para esto deben reutilizarse los procedimientos implementados en
+los puntos a. y b. PISTA: una pirámide gigante se puede conseguir con 4 pirámides comunes, si se las
+ubica con cuidado.
+*/
+
+procedure DibujarBase(){
+    /*
+        Propósito:
+            Dibuja una base de pirámide de 5 celdas de lado
+        Precondición:
+            * La celda actual debe estar vacía
+            * Debe haber cuatro celdas vacías al Este del cabezal
+    */
+    Poner(Verde)
+    Mover(Este)
+    Poner(Verde)
+    Mover(Este)
+    Poner(Verde)
+    Mover(Este)
+    Poner(Verde)
+    Mover(Este)
+    Poner(Verde)
+}
+
+procedure DibujarMedio(){
+    /*
+        Propósito:
+            Dibuja un sector del medio de pirámide de 3 celdas de lado
+        Precondición:
+            * La celda actual debe estar vacía
+            * Debe haber dos celdas vacías al Este del cabezal
+    */
+    Mover(Este)
+    Poner(Verde)
+    Mover(Este)
+    Poner(Verde)
+    Mover(Este)
+    Poner(Verde)
+    Mover(Este)
+}
+
+procedure DibujarPunta(){
+    /*
+        Propósito:
+            Dibuja una punta de pirámide
+        Precondición:
+            * La celda actual debe estar vacía
+    */
+    Mover(Este)
+    Mover(Este)
+    Poner(Verde)
+    Mover(Este)
+    Mover(Este)
+}
+
+procedure PosicionarCabezalEnInicioDeParte(){
+    /*
+        Propósito:
+            Posiciona el cabezal en la celda de inicio para dibujar las capas de la pirámide
+        Precondición:
+            * Debe haber al menos 4 celdas vacías al Este del cabezal
+    */
+    Mover(Oeste)
+    Mover(Oeste)
+    Mover(Oeste)
+    Mover(Oeste)
+    Mover(Norte)
+}
+
+procedure PosicionarAInicioDePiramideSiguiente(){
+    /*
+        Propósito:
+            Posiciona el cabezal en la celda de inicio para dibujar la siguiente pirámide
+        Precondición:
+            * Debe haber al menos 4 celdas vacías al Este del cabezal
+    */
+    Mover(Sur)
+    Mover(Sur)
+    Mover(Este)
+}
+
+procedure DibujarPiramide(){
+    /*
+        Propósito:
+            Dibuja una pirámide de 5 celdas de base y 3 celdas de altura
+        Precondición:
+            * La celda actual debe estar vacía
+            * Debe haber cuatro celdas vacías al Este del cabezal
+    */
+    DibujarBase()
+    PosicionarCabezalEnInicioDeParte()
+    DibujarMedio()
+    PosicionarCabezalEnInicioDeParte()
+    DibujarPunta()
+}
+
+procedure DibujarPiramideInvertida(){
+    /*
+        Propósito:
+            Dibuja una pirámide invertida de 5 celdas de base y 3 celdas de altura
+        Precondición:
+            * La celda actual debe estar vacía
+            * Debe haber cuatro celdas vacías al Este del cabezal
+    */
+    DibujarPunta()
+    Mover(Norte)
+    Mover(Oeste)
+    DibujarMedio()
+    Mover(Norte)
+    Mover(Este)
+    DibujarBase()
+}
+
+procedure DibujarPiramideEstirada(){
+    /*
+        Propósito:
+            Dibuja una pirámide estirada a lo alto de 5 celdas de base y 6 celdas de altura
+        Precondición:
+            * La celda actual debe estar vacía
+            * Debe haber cuatro celdas vacías al Este del cabezal
+    */
+    DibujarBase()
+    Mover(Norte)
+    DibujarMedio()
+    Mover(Norte)
+    DibujarMedio()
+    Mover(Norte)
+    DibujarPunta()
+    Mover(Norte)
+    DibujarPunta()
+}
+
+procedure PosicionarPiramideSuperior(){
+    /*
+        Propósito:
+            Posiciona el cabezal en la posicion (3,3) para dibujar la pirámide superior de la pirámide gigante
+        Precondición:
+            * El cabezal debe estar en la posición (10,10)
+    */
+    Mover(Norte)
+    Mover(Norte)
+}
+
+procedure DibujarPiramideGigante(){
+    /*
+        Propósito:
+            Dibuja una pirámide gigante de 11 celdas de base y 6 celdas de altura
+        Precondición:
+            * La celda actual debe estar vacía
+            * Debe haber diez celdas vacías al Este del cabezal
+    */
+    DibujarPiramide()
+    PosicionarAInicioDePiramideSiguiente()
+    DibujarPiramideInvertida()
+    PosicionarAInicioDePiramideSiguiente()
+    DibujarPiramide()
+    PosicionarPiramideSuperior()
+    DibujarPiramide()
+}
+

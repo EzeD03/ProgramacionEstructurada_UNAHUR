@@ -1,0 +1,205 @@
+/*
+Utilizando bolitas pueden representarse diversos elementos; un ejemplo de esto es la posibilidad de
+representar una fecha. Una fecha que los argentinos deberíamos recordar, para no repetirla jamás, es el 24 de
+marzo de 1976, hoy constituido como Día de la Memoria por la Verdad y la Justicia en Argentina.
+Definir el procedimiento RegistrarElDíaDeLaMemoria() que:
+    ▪ en la celda actual, ponga 24 bolitas Azules, que representan el día,
+    ▪ en la celda lindante al Este de la actual, ponga 3 bolitas Rojas, que representan el mes, y
+    ▪ en la celda lindante al Este de la anterior, ponga 1976 bolitas verdes, representando el año.
+
+Recordar que la solución completa incluye la documentación: propósito, precondición y parámetros, los cuales
+deben ser escritos ANTES de escribir el código.
+La solución se puede realizar íntegramente utilizando los conceptos vistos en la materia hasta el momento, y
+no se requieren herramientas adicionales. No debe utilizar conceptos aún no vistos en la teoría para
+solucionar el problema.
+*/
+
+procedure RegistrarElDíaDeLaMemoria() {
+    /*
+        PROPÓSITO:
+            Registrar el Día de la Memoria por la Verdad y la Justicia en Argentina, colocando bolitas de colores que representan el día, mes y año.
+        PRECONDICIONES:
+            * El tablero debe estar vacío o preparado para recibir las bolitas de colores antes de ejecutar el procedimiento.
+            * Hay suficiente espacio para colocar las bolitas en las celdas correspondientes al día, mes y año.
+    */
+    Poner24Azules()
+    Mover(Este)
+    Poner3Rojas()
+    Mover(Este)
+    Poner1976Verdes()
+}
+
+procedure Poner24Azules(){
+    /*
+        PROPÓSITO:
+            Colocar 24 bolitas azules en el tablero, representando el día.
+        PRECONDICIONES:
+            * El espacio donde se colocarán las bolitas azules debe estar vacío o preparado para recibir las bolitas.
+    */
+    Poner8Azules()
+    Poner8Azules()
+    Poner8Azules()
+}
+
+procedure Poner8Azules(){
+    /*
+        PROPÓSITO:
+            Colocar 8 bolitas azules en el tablero.
+        PRECONDICIONES:
+            * El espacio donde se colocarán las bolitas azules debe estar vacío o preparado para recibir las bolitas.
+    */
+    Poner4Azules()
+    Poner4Azules()
+}
+
+procedure Poner4Azules(){
+    /*
+        PROPÓSITO:
+            Colocar 4 bolitas azules en el tablero.
+        PRECONDICIONES:
+            * El espacio donde se colocarán las bolitas azules debe estar vacío o preparado para recibir las bolitas.
+    */
+    Poner(Azul)
+    Poner(Azul)
+    Poner(Azul)
+    Poner(Azul)
+}
+
+procedure Poner3Rojas(){
+    /*
+        PROPÓSITO:
+            Colocar 3 bolitas rojas en el tablero, representando el mes.
+        PRECONDICIONES:
+            * El espacio donde se colocarán las bolitas rojas debe estar vacío o preparado para recibir las bolitas.
+    */
+    Poner(Rojo)
+    Poner(Rojo)
+    Poner(Rojo)
+}
+
+procedure Poner1976Verdes(){
+    /*
+        PROPÓSITO:
+            Colocar 1976 bolitas verdes en el tablero, representando el año.
+        PRECONDICIONES:
+            * El espacio donde se colocarán las bolitas verdes debe estar vacío o preparado para recibir las bolitas.
+    */
+    Poner1024Verdes()
+    Poner512Verdes()
+    Poner256Verdes()
+    Poner128Verdes()
+    Poner32Verdes()
+    Poner16Verdes()
+    Poner8Verdes()
+}
+
+procedure Poner1024Verdes(){
+    /*
+        PROPÓSITO:
+            Colocar 1024 bolitas verdes en el tablero.
+        PRECONDICIONES:
+            * El espacio donde se colocarán las bolitas verdes debe estar vacío o preparado para recibir las bolitas.
+    */
+    Poner512Verdes()
+    Poner512Verdes()
+}
+
+procedure Poner512Verdes(){
+    /*
+        PROPÓSITO:
+            Colocar 512 bolitas verdes en el tablero.
+        PRECONDICIONES:
+            * El espacio donde se colocarán las bolitas verdes debe estar vacío o preparado para recibir las bolitas.
+    */
+    Poner256Verdes()
+    Poner256Verdes()
+}
+
+procedure Poner256Verdes(){
+    /*
+        PROPÓSITO:
+            Colocar 256 bolitas verdes en el tablero.
+        PRECONDICIONES:
+            * El espacio donde se colocarán las bolitas verdes debe estar vacío o preparado para recibir las bolitas.
+    */
+    Poner128Verdes()
+    Poner128Verdes()
+}
+
+procedure Poner128Verdes(){
+    /*
+        PROPÓSITO:
+            Colocar 128 bolitas verdes en el tablero.
+        PRECONDICIONES:
+            * El espacio donde se colocarán las bolitas verdes debe estar vacío o preparado para recibir las bolitas.
+    */
+    Poner64Verdes()
+    Poner64Verdes()
+}
+
+procedure Poner64Verdes(){
+    /*
+        PROPÓSITO:
+            Colocar 64 bolitas verdes en el tablero.
+        PRECONDICIONES:
+            * El espacio donde se colocarán las bolitas verdes debe estar vacío o preparado para recibir las bolitas.
+    */
+    Poner32Verdes()
+    Poner32Verdes()
+}
+
+procedure Poner32Verdes(){
+    /*
+        PROPÓSITO:
+            Colocar 32 bolitas verdes en el tablero.
+        PRECONDICIONES:
+            * El espacio donde se colocarán las bolitas verdes debe estar vacío o preparado para recibir las bolitas.
+    */
+    Poner16Verdes()
+    Poner16Verdes()
+}
+
+procedure Poner16Verdes(){
+    /*
+        PROPÓSITO:
+            Colocar 16 bolitas verdes en el tablero.
+        PRECONDICIONES:
+            * El espacio donde se colocarán las bolitas verdes debe estar vacío o preparado para recibir las bolitas.
+    */
+    Poner8Verdes()
+    Poner8Verdes()
+}
+
+procedure Poner8Verdes(){
+    /*
+        PROPÓSITO:
+            Colocar 8 bolitas verdes en el tablero.
+        PRECONDICIONES:
+            * El espacio donde se colocarán las bolitas verdes debe estar vacío o preparado para recibir las bolitas.
+    */
+    Poner4Verdes()
+    Poner4Verdes()
+}
+
+procedure Poner4Verdes(){
+    /*
+        PROPÓSITO:
+            Colocar 4 bolitas verdes en el tablero.
+        PRECONDICIONES:
+            * El espacio donde se colocarán las bolitas verdes debe estar vacío o preparado para recibir las bolitas.
+    */
+    Poner(Verde)
+    Poner(Verde)
+    Poner(Verde)
+    Poner(Verde)
+}
+
+program {
+    /*
+        PROPÓSITO:
+            Ejecutar el procedimiento para registrar el Día de la Memoria por la Verdad y la Justicia en Argentina.
+        PRECONDICIONES:
+            * El tablero debe estar vacío o preparado para recibir las bolitas de colores antes de ejecutar el programa.
+    */
+    RegistrarElDíaDeLaMemoria()
+}

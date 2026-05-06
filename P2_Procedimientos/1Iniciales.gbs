@@ -1,0 +1,154 @@
+/*
+Escribir un programa que ponga sus iniciales en el tablero usando bolitas color Verde para los nombres y color
+Rojo para el apellido, dejando el cabezal en la celda inicial. Para escribir sus iniciales, se debe definir cómo se
+verán las letras en el tablero.
+Reflexionamos: ¿Cuál es el propósito y las precondiciones del programa? ¿Cómo lo puede ayudar la definición
+de procedimientos? ¿Qué características tienen que tener los procedimientos para favorecer su adecuada
+combinación? ¿Cuál es el propósito y las precondiciones de los procedimientos realizados?
+*/
+
+// Procedimiento para escribir la letra "E"
+procedure PonerInicialEDelNombre(){
+    /*
+        Propósito:
+            Grafica una letra "E" con bolitas verdes en un tablero.
+        Precondiciones:
+            - El cabezal debe ubicarse en la fila antes de llamar al procedimiento.
+            - Todas las celdas superiores a partir de la fila donde se ubica el cabezal debe estar vacío o preparado para recibir la letra "E".
+    */
+    // Grafica la primer columna de la "E"
+    PonerLineaVerticalDeE()
+    // Grafica la segunda y tercer columna de la "E"
+    PonerRayasDeE()
+    PonerRayasDeE()
+}
+
+procedure PonerLineaVerticalDeE(){
+    /*
+        Propósito:
+            Grafica la parte vertical de la letra "E" con bolitas verdes en un tablero.
+        Precondiciones:
+            - El cabezal debe ubicarse en la fila antes de llamar al procedimiento.
+            - Todas las celdas superiores a partir de la fila donde se ubica el cabezal debe estar vacío o preparado para recibir la letra "E".
+    */
+    Poner(Verde)
+    Mover(Norte)
+    Poner(Verde)
+    Mover(Norte)
+    Poner(Verde)
+    Mover(Norte)
+    Poner(Verde)
+    Mover(Norte)
+    Poner(Verde)
+    IrAlBorde(Sur)
+    Mover(Este)
+}
+
+procedure PonerRayasDeE(){
+    /*
+        propósito:
+            Grafica las partes horizontales de la letra "E" con bolitas verdes en un tablero.
+        Precondiciones:
+            - El cabezal debe ubicarse en la fila antes de llamar al procedimiento.
+            - Todas las celdas superiores a partir de la fila donde se ubica el cabezal debe estar vacío o preparado para recibir la letra "E".
+    */
+    Poner(Verde)
+    Mover(Norte)
+    Mover(Norte)
+    Poner(Verde)
+    Mover(Norte)
+    Mover(Norte)
+    Poner(Verde)
+    IrAlBorde(Sur)
+    Mover(Este)
+}
+
+// Procedimiento para escribir la letra "R"
+
+procedure PonerInicialRDelApellido(){
+    /*
+        Propósito:
+            Grafica una letra "R" con bolitas rojas en un tablero.
+        Precondiciones:
+            - El cabezal debe ubicarse en la fila antes de llamar al procedimiento.
+            - Todas las celdas superiores a partir de la fila donde se ubica el cabezal debe estar vacío o preparado para recibir la letra "R".
+    */
+    // Grafica la primer columna de la "R"
+    PonerLineaVerticalDeR()
+    // Grafica la segunda columna de la "R"
+    PonerColumna2DeR()
+    // Grafica la tercer columna de la "R"
+    PonerColumna3DeR()
+}
+
+procedure PonerLineaVerticalDeR(){
+    /*
+        Propósito:
+            Grafica la parte vertical de la letra "R" con bolitas rojas en un tablero.
+        Precondiciones:
+            - El cabezal debe ubicarse en la fila antes de llamar al procedimiento.
+            - Todas las celdas superiores a partir de la fila donde se ubica el cabezal debe estar vacío o preparado para recibir la letra "R".
+    */
+    Poner(Rojo)
+    Mover(Norte)
+    Poner(Rojo)
+    Mover(Norte)
+    Poner(Rojo)
+    Mover(Norte)
+    Poner(Rojo)
+    Mover(Norte)
+    Poner(Rojo)
+    IrAlBorde(Sur)
+    Mover(Este)
+}
+
+procedure PonerColumna2DeR(){
+    /*
+        Propósito:
+            Grafica la columna central vertical de la letra "R" con bolitas rojas en un tablero.
+        Precondiciones:
+            - El cabezal debe ubicarse en la fila antes de llamar al procedimiento.
+            - Todas las celdas superiores a partir de la fila donde se ubica el cabezal debe estar vacío o preparado para recibir la letra "R".
+    */
+    Mover(Norte)
+    Mover(Norte)
+    Poner(Rojo)
+    Mover(Norte)
+    Mover(Norte)
+    Poner(Rojo)
+    IrAlBorde(Sur)
+    Mover(Este)
+}
+
+procedure PonerColumna3DeR(){
+    /*
+        Propósito:
+            Grafica la última columna de la letra "R" con bolitas rojas en un tablero.
+        Precondiciones:
+            - El cabezal debe ubicarse en la fila 0 antes de llamar al procedimiento.
+            - Todas las celdas superiores a partir de la fila donde se ubica el cabezal debe estar vacío o preparado para recibir la letra "R".
+    */
+    Poner(Rojo)
+    Mover(Norte)
+    Poner(Rojo)
+    Mover(Norte)
+    Mover(Norte)
+    Poner(Rojo)
+    Mover(Norte)
+    Poner(Rojo)
+    IrAlBorde(Sur)
+    IrAlBorde(Oeste)
+}
+
+program {
+    /*
+        PROPÓSITO:  
+            El programa tiene como propósito escribir las iniciales del nombre y apellido del usuario en un tablero utilizando bolitas de colores. Las iniciales del nombre se representarán con bolitas verdes, mientras que las iniciales del apellido se representarán con bolitas rojas. El programa deja el cabezal en la celda inicial después de completar la tarea.
+        PRECONDICIONES:
+            * El tablero debe estar vacío o preparado para recibir las bolitas de colores antes de ejecutar el programa.
+            * El usuario debe ser conciente de las iniciales que desea representar y cómo se verán en el tablero.
+            * El programa asume que el usuario tiene un nombre y apellido con al menos una letra cada uno para representar las iniciales E y R.
+    */
+    PonerInicialEDelNombre()
+    PonerInicialRDelApellido()
+}

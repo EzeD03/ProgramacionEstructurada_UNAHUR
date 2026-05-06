@@ -1,0 +1,93 @@
+/*
+Construir un procedimiento PonerGuardaDe5Azulejos(), que arme una “guarda” de 5 azulejos (como las que
+decoran las paredes). Cada azulejo está conformado por 1 bolita verde, 5 negras y 9 rojas.
+
+Recordar seguir una metodología adecuada para la construcción del código: COMENZAR por escribir el
+contrato completo del procedimiento, luego pensar las subtareas necesarias y darles un nombre adecuado,
+escribir el contrato de las subtareas, LUEGO el código del procedimiento pedido en términos de las subtareas,
+y FINALMENTE, realizar el código de las subtareas siguiendo la misma metodología (que denominamos
+metodología de construcción de programas top-down).
+*/
+
+procedure PonerGuardaDe5Azulejos() {
+    /*
+        PROPÓSITO:
+            Poner una guarda de 5 azulejos, donde cada azulejo está conformado por 1 bolita verde, 5 negras y 9 rojas.
+        PRECONDICIONES:
+            * El tablero debe estar vacío o preparado para recibir las bolitas de colores antes de ejecutar el procedimiento.
+            * Hay suficiente espacio para colocar la guarda de 5 azulejos en la dirección deseada.
+    */
+    PonerAzulejo()
+    Mover(Este)
+    PonerAzulejo()
+    Mover(Este)
+    PonerAzulejo()
+    Mover(Este)
+    PonerAzulejo()
+    Mover(Este)
+    PonerAzulejo()
+}
+
+procedure PonerAzulejo() {
+    /*
+        PROPÓSITO:
+            Poner un azulejo, que consiste en colocar 1 bolita verde, 5 negras y 9 rojas en el tablero.
+        PRECONDICIONES:
+            * El espacio donde se colocará el azulejo debe estar vacío o preparado para recibir las bolitas de colores.
+    */
+    Poner1Verdes()
+    Poner5Negras()
+    Poner9Rojas()
+}
+
+procedure Poner1Verdes() {
+    /*
+        PROPÓSITO:
+            Colocar 1 bolita verde en el tablero.
+        PRECONDICIONES:
+            * El espacio donde se colocará la bolita verde debe estar vacío o preparado para recibir la bolita.
+    */
+    Poner(Verde)
+}
+
+procedure Poner5Negras(){
+    /*
+        PROPÓSITO:
+            Colocar 5 bolitas negras en el tablero.
+        PRECONDICIONES:
+            * El espacio donde se colocarán las bolitas negras debe estar vacío o preparado para recibir las bolitas.
+    */
+    Poner(Negro)
+    Poner(Negro)
+    Poner(Negro)
+    Poner(Negro)
+    Poner(Negro)
+}
+
+procedure Poner9Rojas(){
+    /*
+        PROPÓSITO:
+            Colocar 9 bolitas rojas en el tablero.
+        PRECONDICIONES:
+            * El espacio donde se colocarán las bolitas rojas debe estar vacío o preparado para recibir las bolitas.
+    */
+    Poner(Rojo)
+    Poner(Rojo)
+    Poner(Rojo)
+    Poner(Rojo)
+    Poner(Rojo)
+    Poner(Rojo)
+    Poner(Rojo)
+    Poner(Rojo)
+    Poner(Rojo)
+}
+
+program {
+    /*
+        PROPÓSITO:  
+            Dibuja una guarda de 5 azulejos.
+        PRECONDICIONES:
+            * No hay precondiciones específicas.
+    */
+    PonerGuardaDe5Azulejos()
+}

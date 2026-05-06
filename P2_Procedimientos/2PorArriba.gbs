@@ -1,0 +1,77 @@
+/*
+Realizar cada uno de los siguientes puntos, en el orden dado (siguiendo una metodología top-down).
+a) Escribir un procedimiento DibujarRectánguloRojoYNegroDe5x3() cuyo contrato es el siguiente:
+
+    procedure DibujarRectánguloRojoYNegroDe5x3()
+        PROPÓSITO
+        Poner un rectángulo sólido de 5 celdas de ancho y 3 celdas de alto, en la que cada celda tenga una bolita
+        de color Rojo y una de color Negro. El cabezal comienza y termina en el vértice inferior izquierda del
+        mismo.
+        PRECONDICIONES
+        Hay al menos 4 celdas al Este y 2 celdas al Norte de la celda actual.
+
+La metodología a seguir que se debe aplicar es la siguiente. En primer lugar, pensar una estrategia; se
+sugiere pensar una estrategia que involucre poner líneas de 5 celdas de ancho. Luego se debe definir
+primero el contrato de un procedimiento llamado DibujarLíneaRojaYNegraDeTamaño5() que exprese la
+subtarea sugerida. Para completar el ejercicio, se debe utilizar este procedimiento auxiliar en la
+codificación del procedimiento pedido, DibujarRectánguloRojoYNegroDe5x3(). El código del
+procedimiento auxiliar no es parte de este inciso, sino del siguiente.
+*/
+
+procedure DibujarRectánguloRojoYNegroDe5x3(){
+    /*
+        PROPÓSITO
+            Poner un rectángulo sólido de 5 celdas de ancho y 3 celdas de alto, en la que cada celda tenga una bolita
+        de color Rojo y una de color Negro. El cabezal comienza y termina en el vértice inferior izquierda del
+        mismo.
+        PRECONDICIONES
+            * Hay al menos 4 celdas al Este y 2 celdas al Norte de la celda actual.
+    */
+
+    DibujarLineaRojaYNegraDeTamaño5()
+    Mover(Norte)
+    DibujarLineaRojaYNegraDeTamaño5()
+    Mover(Norte)
+    DibujarLineaRojaYNegraDeTamaño5()
+    IrAlBorde(Sur)
+}
+
+procedure DibujarLineaRojaYNegraDeTamaño5(){
+    /*
+        PROPÓSITO
+            Poner una línea de 5 celdas de ancho, en la que cada celda tenga una bolita de color Rojo y una de color Negro.
+        PRECONDICIONES
+            * Hay al menos 4 celdas al Este de la celda actual.
+    */
+    PonerUnaNegraYUnaRoja()
+    Mover(Este)
+    PonerUnaNegraYUnaRoja()
+    Mover(Este)
+    PonerUnaNegraYUnaRoja()
+    Mover(Este)
+    PonerUnaNegraYUnaRoja()
+    Mover(Este)
+    PonerUnaNegraYUnaRoja()
+    IrAlBorde(Oeste)
+}
+
+procedure PonerUnaNegraYUnaRoja(){
+    /*
+        Propósito:
+            Poner una bolita de color Rojo y una de color Negro.
+        Precondición:
+            * La celda actual está vacía.
+    */
+    Poner(Rojo)
+    Poner(Negro)
+}
+
+program {
+    /*
+        PROPÓSITO:  
+            Coloca un rectángulo sólido de 5 celdas de ancho y 3 celdas de alto, en la que cada celda tenga una bolita de color Rojo y una de color Negro.
+        PRECONDICIONES:
+            * Hay al menos 4 celdas al Este y 2 celdas al Norte de la celda actual.
+    */
+    DibujarRectánguloRojoYNegroDe5x3()
+}
