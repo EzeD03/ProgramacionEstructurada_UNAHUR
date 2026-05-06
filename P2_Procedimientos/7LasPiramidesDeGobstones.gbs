@@ -105,7 +105,7 @@ procedure PosicionarAInicioDePiramideSiguiente(){
     */
     Mover(Sur)
     Mover(Sur)
-    Mover(Este)
+    Mover(Oeste)
 }
 
 procedure DibujarPiramide(){
@@ -132,11 +132,9 @@ procedure DibujarPiramideInvertida(){
             * Debe haber cuatro celdas vacías al Este del cabezal
     */
     DibujarPunta()
-    Mover(Norte)
-    Mover(Oeste)
+    PosicionarCabezalEnInicioDeParte()
     DibujarMedio()
-    Mover(Norte)
-    Mover(Este)
+    PosicionarCabezalEnInicioDeParte()
     DibujarBase()
 }
 
@@ -167,7 +165,13 @@ procedure PosicionarPiramideSuperior(){
             * El cabezal debe estar en la posición (10,10)
     */
     Mover(Norte)
-    Mover(Norte)
+    Mover(Oeste)
+    Mover(Oeste)
+    Mover(Oeste)
+    Mover(Oeste)
+    Mover(Oeste)
+    Mover(Oeste)
+    Mover(Oeste)
 }
 
 procedure DibujarPiramideGigante(){
@@ -187,3 +191,16 @@ procedure DibujarPiramideGigante(){
     DibujarPiramide()
 }
 
+
+
+program {
+        /*
+            Propósito:
+                Dibuja una pirámide gigante de 11 celdas de base y 6 celdas de altura
+            Precondición:
+                * La celda actual debe estar vacía
+                * Debe haber diez celdas vacías al Este del cabezal 
+                * Debe haber 6 celdas vacías al Norte del cabezal
+        */
+    DibujarPiramideGigante()
+}

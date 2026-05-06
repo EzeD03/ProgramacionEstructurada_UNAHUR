@@ -1,0 +1,91 @@
+/*
+    En este ejercicio, se usará el tablero para representar un bosque. Cada celda representa a una parcela. Cada
+bolita verde representa un árbol. Cada bolita roja representa una semilla. Una bolita negra representa una
+bomba. Una bolita azul representa una unidad de nutrientes.
+Escribir los siguientes procedimientos de representación, que hacen lo que su nombre indica. Todos trabajan
+siempre sobre la celda actual.
+
+    ▪ PonerUnaSemilla()     ▪ PonerUnÁrbol()    ▪ PonerUnaBomba()  ▪ PonerUnNutriente()
+    ▪ SacarUnaSemilla()     ▪ SacarUnÁrbol()    ▪ SacarUnaBomba()  ▪ SacarUnNutriente()
+*/
+
+procedure PonerUnaSemilla(){
+    /*
+        Propósito:
+            Pone una semilla en la parcela actual
+        Precondición:
+            * Ningúna
+    */
+    Poner(Rojo)
+}
+
+procedure PonerUnÁrbol(){
+    /*
+        Propósito:
+            Pone un árbol en la parcela actual
+        Precondición:
+            * Ningúna
+    */
+    Poner(Verde)
+}
+
+procedure PonerUnaBomba(){
+    /*
+        Propósito:
+            Pone una bomba en la parcela actual
+        Precondición:
+            * Ningúna
+    */
+    Poner(Negro)
+}
+
+procedure PonerUnNutriente(){
+    /*
+        Propósito:
+            Pone un nutriente en la parcela actual
+        Precondición:
+            * Ningúna
+    */
+    Poner(Azul)
+}
+
+procedure SacarUnaSemilla(){
+    /*
+        Propósito:
+            Saca una semilla de la parcela actual
+        Precondición:
+            * La parcela actual debe contener una semilla
+    */
+    Sacar(Rojo)
+}
+
+procedure SacarUnÁrbol(){
+    /*
+        Propósito:
+            Saca un árbol de la parcela actual
+        Precondición:
+            * La parcela actual debe contener un árbol
+    */
+    Sacar(Verde)
+}
+
+procedure SacarUnaBomba(){
+    /*
+        Propósito:
+            Saca una bomba de la parcela actual
+        Precondición:
+            * La parcela actual debe contener una bomba
+    */
+    Sacar(Negro)
+}
+
+procedure SacarUnNutriente(){
+    /*
+        Propósito:
+            Saca un nutriente de la parcela actual
+        Precondición:
+            * La parcela actual debe contener un nutriente
+    */
+    Sacar(Azul)
+}
+    
