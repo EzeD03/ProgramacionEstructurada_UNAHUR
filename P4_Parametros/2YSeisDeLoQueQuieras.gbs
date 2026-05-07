@@ -5,10 +5,25 @@ color dado.
 
 procedure Poner6DeColor_(colorAPoner){
     /*
-        Propósito:
+        Propósito: Pone 6 bolitas de color *colorAPoner* en la celda actual.
         Precondiciones:
-            *
+            * Ninguna.
         Parámetros:
-            *
+            *colorAPoner: Color - Es el color que indicamos para poner las bolitas.
     */
+    repeat (6) {
+        Poner(colorAPoner)
+    }
+}
+
+program {
+    /*
+        Propósito: Pone 6 bolitas de color en la celda actual.
+        Precondiciones:
+            * Ninguna.
+    */
+    Poner6DeColor_(Azul)
+    Poner6DeColor_(Rojo)
+    Poner6DeColor_(Negro)
+    Poner6DeColor_(Verde)
 }

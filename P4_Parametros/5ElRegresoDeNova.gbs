@@ -1,0 +1,33 @@
+/*
+¿Se acuerdan de Nova? Es el nuevo compañero del equipo, que no tiene formación profesional, y su código
+está lleno de malas prácticas de programación. Esta vez, en su código se encontró un procedimiento que tiene
+el código hecho, pero no el contrato, y no está indentado.
+
+a) En primer lugar, se pide corregir los errores de Nova. No olvidar indicar en qué posición queda el cabezal,
+ni de establecer para qué son los parámetros. El código de Nova es el siguiente:
+
+procedure Poner_ADistancia3Al_(color, dirección) {
+Mover3VecesAl_(dirección) Poner(color) }
+
+b) En segundo lugar, se pide contestar la siguiente pregunta que realizó Nova: ¿Cuál es la relación entre el
+parámetro dirección de este procedimiento con el parámetro direcciónAMover de Mover3VecesAl_?
+*/
+
+procedure Poner_ADistancia3Al_(color, direccion){
+    /*
+        Proposito: Mueve el cabezal 3 celdas hacia el *direccion* y pone una bolita *color* en la posición final.
+        Precondiciones:
+            * Deben existir al menos 3 celdas hacia el *direccion*
+        Parametros:
+            *color: Color - Es el color que nos interesa colocar en la posición final.
+            *direccion: Direccion - es hacia donde queremos que se mueva el cabezal.
+    */
+    Mover3VecesAl_(direccion)
+    Poner(color)
+}
+
+/*
+    La relación entre ambos procedimientos contra el mismo parámetro es la herencia de la información final.
+    Poner_ADistancia3Al_() va a recibir una dirección desde aquel parametro, misma que va a luego heredar como parametro 
+    en su propia funcionalidad el Mover3VecesAl_()
+*/
