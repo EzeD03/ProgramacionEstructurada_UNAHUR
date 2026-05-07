@@ -1,0 +1,32 @@
+/*
+Escribir un procedimiento Mover3VecesAl_(direcciónAMover) que dada una dirección direcciónAMover
+mueva el cabezal tres posiciones en dicha dirección.
+    a) ¿Qué hay que hacer ahora para mover el cabezal tres veces al Norte?
+    b) ¿Qué beneficios trae el uso de parámetros?
+    c) ¿Cuántos procedimientos puedo ahorrarme haciendo un único procedimiento con un parámetros?
+¡Recordar! No olvidar escribir el contrato del procedimiento ANTES de realizar el código (y que los parámetros
+son parte del mismo); también discutir la Prec. escrita con sus compañeros para verificar que la misma es
+adecuada y correcta.
+*/
+
+procedure Mover3VecesAl_(direccionAMover){
+    /*
+        Propósito: Mueve 3 veces el cabezal a la dirección *direccionAMover*.
+        Precondiciones:
+            * Debe haber mínimo 3 celdas lindantes en la dirección *direccionAMover* desde la celda actual.
+        Parametros:
+            *direccionAMover: Direccion - Indica la dirección a la que se va a orientar el movimiento del cabezal.
+    */
+    repeat (3){
+        Mover(direccionAMover)
+    }
+}
+
+program {
+    /*
+    Propósito: Mueve 3 veces el cabezal a la dirección *direccionAMover*.
+        Precondiciones:
+            * Debe haber mínimo 3 celdas lindantes en la dirección *direccionAMover* desde la celda actual.
+    */
+    Mover3VecesAl_(Este)
+}

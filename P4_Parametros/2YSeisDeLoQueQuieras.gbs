@@ -1,0 +1,14 @@
+/*
+Escribir un procedimiento Poner6DeColor_(colorAPoner) que dado un color colorAPoner ponga 6 bolitas del
+color dado.
+*/
+
+procedure Poner6DeColor_(colorAPoner){
+    /*
+        Propósito:
+        Precondiciones:
+            *
+        Parámetros:
+            *
+    */
+}
