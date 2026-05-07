@@ -1,0 +1,90 @@
+/*
+    Escribir un procedimiento DibujarRectánguloRojoYNegroDe5x3() que dibuje un rectángulo sólido de 5 celdas
+de largo por 3 de alto, similar al realizado en prácticas anteriores, pero esta vez, utilice repetición para
+solucionar el problema.
+
+El rectángulo es sólido. Es decir, la transformación esperada es similar a la que se muestra en la imagen.
+*/
+
+procedure DibujarRectanguloRojoYNegroDe5x3(){
+    /*
+        Propósito: Coloca un rectángulo de 5x3 celdas Rojas y Negras
+        Precondiciones:
+            * Debe haber mínimo 4 celdas al Este y 2 al Norte de la celda Inicial . 
+            * Las celdas deben estar vacías.
+    */
+    DibujarLineaRojaYNegraDe5DeLargo()
+    repeat (2) {
+        IrAlInicioDeSiguienteLinea()
+        DibujarLineaRojaYNegraDe5DeLargo()
+    }
+    RegresarAlInicioDelRectangulo()
+}
+
+procedure DibujarLineaRojaYNegraDe5DeLargo(){
+    /*
+        Propósito: Poner una linea roja de 5 celdas dirección Este y regresa a su posición.
+        Precondiciones:
+            * Debe haber mínimo 4 celdas disponibles al Este de la celda actual.
+            * Las celdas deben estar vacías.
+    */
+    PonerLineaDe5RojaYNegra()
+    RegresarAlInicioDeLaLinea()
+}
+
+procedure PonerLineaDe5RojaYNegra(){
+    /*
+        Propósito: Coloca una linea de 5 celdas Rojas y Negras en dirección Este.
+        Precondiciones:
+            * Debe haber mínimo 4 celdas disponibles al Este de la celda actual.
+            * Las celdas deben estar vacías.
+    */
+    Poner(Rojo)
+    Poner(Negro)
+    repeat (4) {
+        Mover(Este)
+        Poner(Rojo)
+        Poner(Negro)
+    }
+}
+
+procedure RegresarAlInicioDeLaLinea(){
+    /*
+        Propósito: Se mueve 4 celdas al Oeste al inicio de la línea dibujada.
+        Precondicion:
+            * Debe estar al final de la línea de 5 celdas o haber mínimo 4 celdas disponibles al Oeste.
+    */
+    repeat (4) {
+        Mover(Oeste)
+    }
+}
+
+procedure IrAlInicioDeSiguienteLinea(){
+    /*
+        Propósito: Mueve el cabezal a la posición de la siguiente línea a dibujar.
+        Precondiciones:
+            * Debe haber mínimo 1 celda al Norte de la celda actual.
+    */
+    Mover(Norte)
+}
+
+procedure RegresarAlInicioDelRectangulo(){
+    /*
+        Propósito: Mueve el cabezal a la posición inicial del rectángulo.
+        Precondiciones: 
+            * Debe haber mínimo 2 celdas al Sur de la celda actual.   
+    */
+    repeat (2) {
+        Mover(Sur)
+    }
+}
+
+program {
+    /*
+        Propósito: Coloca un rectángulo de 5x3 celdas Rojas y Negras
+        Precondiciones:
+            * Debe haber mínimo 4 celdas al Este y 2 al Norte de la celda Inicial . 
+            * Las celdas deben estar vacías.
+    */
+    DibujarRectanguloRojoYNegroDe5x3()
+}

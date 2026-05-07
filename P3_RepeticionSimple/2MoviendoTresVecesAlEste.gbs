@@ -1,0 +1,25 @@
+/*
+    Escribir un procedimiento Mover3VecesAlEste() que mueva el cabezal tres posiciones al Este de la actual.
+¿Qué similitudes encuentra entre este procedimiento y el anterior? ¿Qué cambiaría si quisiera hacer un
+procedimiento que mueva tres veces al Oeste, o tres al Sur, nuestro cabezal?
+*/
+
+procedure Mover3VecesAlEste(){
+    /*
+        Propósito: Mueve el cabezal 3 celdas al Este
+        Precondiciones:
+            * Debe haber mínimo 3 celdas disponibles al Este de la celda actual.   
+    */
+    repeat (3) {
+        Mover(Este)
+    }
+}
+
+program {
+    /*
+        PROPÓSITO:  Mueve el cabezal 3 celdas al Este.
+        PRECONDICIONES:
+            * Debe haber mínimo 3 celdas disponibles al Este de la celda actual.
+    */
+    Mover3VecesAlEste()
+}
