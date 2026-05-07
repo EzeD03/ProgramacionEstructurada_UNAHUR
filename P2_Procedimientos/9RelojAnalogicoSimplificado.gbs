@@ -1,0 +1,191 @@
+/*
+Dibujar un reloj analógico de agujas en un tablero cuadriculado puede ser un desafío. Una simplificación
+posible sería representar solamente algunos de los números que aparecen en el mismo: el 12 arriba, el 3 a la
+derecha, el 9 a la izquierda y el 6 abajo.
+
+Construir un procedimiento DibujarRelojAnalógicoSimplificado(), que ponga los números del reloj tal como se
+indicó, alrededor del casillero actual. El tamaño del reloj será de 2 celdas de “radio” (suponiendo que miramos
+al reloj como un círculo).
+
+Utilizar el comando DibujarRelojAnalógicoSimplificado() en un tablero inicial vacío de 5x5 con la celda inicial
+en el centro del mismo, es el siguiente:
+
+    . . . . . . .
+    . . .1 2. . .
+    . . . . . . .
+    . 9 . . . 3 .
+    . . . . . . .
+    . . . 6 . . .
+    . . . . . . .
+
+
+¡Recordar! Escribir el contrato en primer lugar, y en caso de utilizar división en subtareas, en seguir la
+metodología top-down para las mismas (primero su nombre y su contrato, usarlas, y recién luego definirlas
+con la misma metodología).
+*/
+
+procedure DibujarRelojAnalogicoSimplificado(){
+    /*
+        Propósito: Dibujar un reloj analógico simplificado con los números 12, 3, 6 y 9 en un tablero de radio 2celdas.
+        Precondición: 
+        * La celda inicial debe estar ubicada a un radio de 2 celdas de cada limite de borde en todas direcciones.
+        * La celdas deben estar vacías.
+    */
+    Poner12()
+    Poner3()
+    Poner6()
+    Poner9()
+}
+
+procedure Poner12(){
+    /*
+        Propósito: Se mueve 1 radio, coloca el número ... y regresa al inicio.
+        Precondiciones:
+            * El cabezal debe estar ubicado en la celda inicial.
+            * Debe haber al menos 1 radio de distancia entre la celda inicial y el borde ... .
+    */
+    Moverse1RadioAlNorte()
+    Colocar12()
+    Moverse1RadioAlSur()
+}
+
+procedure Poner3(){
+    /*
+        Propósito: Se mueve 1 radio, coloca el número ... y regresa al inicio.
+        Precondiciones:
+            * El cabezal debe estar ubicado en la celda inicial.
+            * Debe haber al menos 1 radio de distancia entre la celda inicial y el borde ... .
+    */
+    Moverse1RadioAlEste()
+    Colocar3()
+    Moverse1RadioAlOeste()
+}
+
+procedure Poner6(){
+    /*
+        Propósito: Se mueve 1 radio, coloca el número ... y regresa al inicio.
+        Precondiciones:
+            * El cabezal debe estar ubicado en la celda inicial.
+            * Debe haber al menos 1 radio de distancia entre la celda inicial y el borde ... .
+    */
+    Moverse1RadioAlSur()
+    Colocar6()
+    Moverse1RadioAlNorte()
+}
+
+procedure Poner9(){
+    /*
+        Propósito: Se mueve 1 radio, coloca el número ... y regresa al inicio.
+        Precondiciones:
+            * El cabezal debe estar ubicado en la celda inicial.
+            * Debe haber al menos 1 radio de distancia entre la celda inicial y el borde ... .
+    */
+    Moverse1RadioAlOeste()
+    Colocar9()
+    Moverse1RadioAlEste()
+}
+
+procedure Moverse1RadioAlNorte(){
+    /*
+        Propósito: Se mueve 1 radio a la dirección ... .
+        Precondición: 
+            * Debe haber mínimo 1 radio de distancia desde la celda inicial y el borde ... .
+    */
+    Mover(Norte)
+    Mover(Norte)
+}
+
+procedure Moverse1RadioAlSur(){
+    /*
+        Propósito: Se mueve 1 radio a la dirección ... .
+        Precondición: 
+            * Debe haber mínimo 1 radio de distancia desde la celda inicial y el borde ... .
+    */
+    Mover(Sur)
+    Mover(Sur)
+}
+
+procedure Moverse1RadioAlEste(){
+    /*
+        Propósito: Se mueve 1 radio a la dirección ... .
+        Precondición: 
+            * Debe haber mínimo 1 radio de distancia desde la celda inicial y el borde ... .
+    */
+    Mover(Este)
+    Mover(Este)
+}
+
+procedure Moverse1RadioAlOeste(){
+    /*
+        Propósito: Se mueve 1 radio a la dirección ... .
+        Precondición: 
+            * Debe haber mínimo 1 radio de distancia desde la celda inicial y el borde ... .
+    */
+    Mover(Oeste)
+    Mover(Oeste)
+}
+
+procedure Colocar12(){
+    /*
+        Propósito: Coloca el número ... en la posición del cabezal
+        Precondiciones: 
+            * La celda debe estar vacía.
+    */
+    Poner3BolitasRojas()
+    Poner3BolitasRojas()
+    Poner3BolitasRojas()
+    Poner3BolitasRojas()
+}
+
+procedure Colocar3(){
+    /*
+        Propósito: Coloca el número ... en la posición del cabezal
+        Precondiciones: 
+            * La celda debe estar vacía.
+    */
+    Poner3BolitasRojas()
+}
+
+procedure Colocar6(){
+    /*
+        Propósito: Coloca el número ... en la posición del cabezal
+        Precondiciones: 
+            * La celda debe estar vacía.
+    */
+    Poner3BolitasRojas()
+    Poner3BolitasRojas()
+}
+
+procedure Colocar9(){
+    /*
+        Propósito: Coloca el número ... en la posición del cabezal
+        Precondiciones: 
+            * La celda debe estar vacía.
+    */
+    Poner3BolitasRojas()
+    Poner3BolitasRojas()
+    Poner3BolitasRojas()
+}
+
+procedure Poner3BolitasRojas(){
+    /*
+        Propósito: Pone 3 bolitas rojas para representar un número en una celda del tablero
+        Precondición: 
+            * La celda debe estar vacía
+    */
+    Poner(Rojo)
+    Poner(Rojo)
+    Poner(Rojo)
+}
+
+program {
+    /*
+        Propósito: Coloca un reloj analógico simplificado con 1 radio de 2celdas y las horas 3, 6, 9 y 12.
+        Precondiciones: 
+            * El tablero debe tener 1 radio de 2 celdas en direcciones NORTE, SUR, ESTE Y OESTE a partir de la celda inicial.
+            * Las celdas deben estar vacías.
+        Observaciones:
+            - Las horas son representadas por cantidades equivalentes en bolitas rojas.
+    */
+    DibujarRelojAnalogicoSimplificado()
+}

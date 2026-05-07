@@ -1,0 +1,63 @@
+/*
+    En el equipo de programación empezó a trabajar un programador que no tiene formación
+profesional, y al que todos apodaron Nova . En el código que escribió Nova se encontró un procedimiento que
+no aplica la técnica de división en subtareas, y tampoco tiene contrato. Para poder integrar el código con el
+resto, en este equipo se requiere que los programas sigan buenas prácticas de programación. Por eso, se pide
+corregir este código para que cumpla con las mismas.
+
+procedure ConstruirEscaleraAzulDe4Escalones() {
+    Poner(Azul) Mover(Este) Poner(Azul) Mover(Norte)
+    Poner(Azul) Mover(Este) Poner(Azul) Mover(Norte)
+    Poner(Azul) Mover(Este) Poner(Azul) Mover(Norte)
+    Poner(Azul) Mover(Este)
+}
+*/
+
+procedure ConstruirEscaleraAzulDe4Escalones(){
+    /*
+        Propósito: Coloca una escalera de 4 escalones azules, donde cada escalón abarca 2 celdas y se apilan diagonalmente.
+        Precondición:
+            * El tablero debe tener un tamaño mínimo de 4 escalones, equivalentes a 5 celdas de ancho por 4 de alto.
+            * Las celdas deben estar vacías
+        Observaciones:
+            - Los escalones van a ser representados por 2 celdas con 1 bolita azul mínimo.
+    */
+    PonerEscalon()
+    PasarASiguienteEscalon()
+    PonerEscalon()
+    PasarASiguienteEscalon()
+    PonerEscalon()
+    PasarASiguienteEscalon()
+    PonerEscalon()
+}
+
+procedure PasarASiguienteEscalon(){
+    /*
+        Propósito: Mueve el cabezal a la posición inicial de un escalón consiguiente.
+        Precondiciones:
+            * Debe existir un escalón consiguiente.
+    */
+    Mover(Norte)
+}
+
+procedure PonerEscalon(){
+    /*
+        Propósito: Coloca un escalón azul de tamaño 2 celdas a partir de la posición actual.
+        Precondiciones:
+            * Debe haber mínimo 1 celda lindante disponible al Este de la celda actual.
+            * Las celdas deben estar vacías.
+    */
+    Poner(Azul)
+    Mover(Este)
+    Poner(Azul)
+}
+
+program {
+    /*
+        Propósito: Construye una escalera Azul de 4 escalones.
+        Precondición: 
+            * El tablero debe poseer 5 celdas al Este y 4 al Norte disponibles desde la posición del cabezal.
+            * Las celdas deben estar vacías.
+    */
+    ConstruirEscaleraAzulDe4Escalones()
+}
