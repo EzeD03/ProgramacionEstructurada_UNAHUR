@@ -1,0 +1,27 @@
+/*
+Indicar el valor y el tipo que representan las expresiones dadas en los ítems en cada uno de los
+tableros A , B y C, suponiendo definido un procedimiento con el contrato dado al final.
+(A) (B) (C)
+
+    a) nroBolitas(Negro) + nroBolitas(Azul)
+    b) opuesto(opuesto(Este))
+    c) nroBolitas(siguiente(Azul))
+    d) 2 * nroBolitas(colorAImitar)
+
+Para este último supondremos que la expresión aparece dentro del cuerpo del procedimiento con el siguiente
+contrato:
+
+procedure PonerElDobleDe_QueDe_(colorAPoner, colorAImitar)
+    PROPÓSITO.
+    Poner bolitas del color *colorAPoner* en una cantidad que sea el doble de las que hay del color
+    *colorAImitar* en la celda actual.
+    PRECONDICIONES.
+    Ninguna.
+    PARÁMETROS.
+    *colorAPoner*. Color. El color del que se pondrán bolitas.
+    *colorAImitar*. Color. El color del que se mirará cuántas bolitas hay en la celda actual.
+    
+Y del cual sabemos fue invocado como PonerElDobleDe_QueDe_(Rojo, Verde)
+Reflexionamos: ¿Podemos saber a priori el valor de una expresión si desconocemos el estado del tablero?
+¿Podemos conocer su tipo? ¿Puede variar el tipo de una expresión si varía el tablero?
+*/

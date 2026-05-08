@@ -1,0 +1,19 @@
+/*
+Escribir Mover_VecesAl_(cantidadAMover, direcciónAMover), un procedimiento que dado un
+número cantidadAMover y una dirección direcciónAMover mueva el cabezal tantas veces como la dada en
+dicha dirección.
+*/
+
+procedure Mover_VecesAl_(cantidadAMover, direccionAMover){
+    /*
+        Propósito: Mueve *cantidadAMover* veces el cabezal a la dirección *direccionAMover*.
+        Precondiciones:
+            * Debe haber mínimo *cantidadAMover* celdas lindantes en la dirección *direccionAMover* desde la celda actual.
+        Parametros:
+            *CantidadAMover*: Numero - Indica la cantidad de celdas que se va a mover el cabezal. 
+            *direccionAMover: Direccion - Indica la dirección a la que se va a orientar el movimiento del cabezal.
+    */
+    repeat (cantidadAMover) {
+        Mover(direccionAMover)
+    }
+}

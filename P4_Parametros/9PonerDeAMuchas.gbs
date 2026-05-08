@@ -1,0 +1,19 @@
+/*
+Escribir un procedimiento Poner_DeColor_(cantidadAPoner, colorAPoner) que dado un número
+cantidadAPoner y un color colorAPoner, ponga tantas bolitas como se indica del color dado de la celda actual.
+*/
+
+procedure Poner_DeColor_(cantidadAPoner, colorAPoner){
+    /*
+        Propósito: Pone *cantidadAPoner* de bolitas color *colorAPoner* en la celda actual.
+        Precondiciones: 
+            * Ninguna
+        Parametros:
+            *cantidadAPoner: Numero - Indica la cantidad de bolitas que se colocarán en el cabezal
+            *colorAPoner: Color - Indica el color de las bolita que se colocarán en el cabezal
+    */
+    repeat (cantidadAPoner) {
+        Poner(colorAPoner)
+    }
+}
+

@@ -1,3 +1,4 @@
+//2.3
 procedure PonerUnaDeCada(){
     /*
         Propósito:
@@ -10,3 +11,59 @@ procedure PonerUnaDeCada(){
     Poner(Azul)
     Poner(Negro)
 }
+//4.9
+procedure Poner_DeColor_(cantidadAPoner, colorAPoner){
+    /*
+        Propósito: Pone *cantidadAPoner* de bolitas color *colorAPoner* en la celda actual.
+        Precondiciones: 
+            * Ninguna
+        Parametros:
+            *cantidadAPoner: Numero - Indica la cantidad de bolitas que se colocarán en el cabezal
+            *colorAPoner: Color - Indica el color de las bolita que se colocarán en el cabezal
+    */
+    repeat (cantidadAPoner) {
+        Poner(colorAPoner)
+    }
+}
+//4.10
+procedure Mover_VecesAl_(cantidadAMover, direccionAMover){
+    /*
+        Propósito: Mueve *cantidadAMover* veces el cabezal a la dirección *direccionAMover*.
+        Precondiciones:
+            * Debe haber mínimo *cantidadAMover* celdas lindantes en la dirección *direccionAMover* desde la celda actual.
+        Parametros:
+            *CantidadAMover*: Numero - Indica la cantidad de celdas que se va a mover el cabezal. 
+            *direccionAMover: Direccion - Indica la dirección a la que se va a orientar el movimiento del cabezal.
+    */
+    repeat (cantidadAMover) {
+        Mover(direccionAMover)
+    }
+}
+//4.11
+procedure Sacar_DeColor_(cantidadASacar, colorASacar){
+    /*
+        Proposito: Saca *cantidadASacar* bolitas color *colorASacar* de la celda actual.
+        Precondiciones: 
+            * Debe haber mínimo *cantidadASacar* bolitas color *colorASacar* en la celda actual
+        Parametros:
+            *cantidadASacar: Numero - Indica la cantidad de bolitas que se van a sacar.
+            *colorASacar: Color - Indica el color de las bolitas que se van a sacar.
+    */
+    repeat (cantidadASacar) {
+        Sacar(colorASacar)
+    }
+}
+//5.6
+procedure SacarTodasLasDeColor_(colorASacar)
+//5.7
+procedure VaciarCelda()
+//6.4a
+procedure Poner_Si_(color, condición)
+//6.4b
+procedure Sacar_Si_(color, condición)
+//6.4c
+procedure Mover_Si_(dirección, condición)
+
+function esCeldaVacía()
+function tieneUnaDeCada()
+function esCeldaConBolitas()

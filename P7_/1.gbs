@@ -1,0 +1,21 @@
+function myFunction(parámetro1, parámetro2) {
+    /*
+        PROPÓSITO:  ....
+        PARÁMETROS:
+            * parámetro1: tipo - descripción.
+            * parámetro2: tipo - descripción.
+        TIPO: Tipo
+        PRECONDICIONES:
+            * ....
+    */
+    
+    return ()
+}
+
+if (condition) {
+    
+} elseif (condition) {
+    
+} else {
+    
+}

@@ -1,0 +1,18 @@
+/*
+    Escribir un procedimiento Sacar_DeColor_(cantidadASacar, colorASacar) que dado un número
+cantidadASacar y un color colorASacar, saque tantas bolitas como se indica del color dado de la celda actual.
+*/
+
+procedure Sacar_DeColor_(cantidadASacar, colorASacar){
+    /*
+        Proposito: Saca *cantidadASacar* bolitas color *colorASacar* de la celda actual.
+        Precondiciones: 
+            * Debe haber mínimo *cantidadASacar* bolitas color *colorASacar* en la celda actual
+        Parametros:
+            *cantidadASacar: Numero - Indica la cantidad de bolitas que se van a sacar.
+            *colorASacar: Color - Indica el color de las bolitas que se van a sacar.
+    */
+    repeat (cantidadASacar) {
+        Sacar(colorASacar)
+    }
+}

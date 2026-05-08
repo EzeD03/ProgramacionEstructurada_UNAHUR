@@ -1,0 +1,18 @@
+/*
+La combinación de parámetros y expresiones booleanas es interesante.
+
+    a) BIBLIOTECA. Escribir un procedimiento Poner_Si_(color, condición) que dado un color y un valor de
+    verdad llamado condición, ponga en la celda actual una bolita del color dado si el valor de verdad de la
+    condición es verdadero, y no lo ponga si no.
+        EJEMPLO: Poner_Si_(Rojo, nroBolitas(Rojo) == 2) solamente pone una bolita roja cuando hay
+        exactamente dos rojas en la celda actual.
+
+    b) BIBLIOTECA. Escribir el procedimiento Sacar_Si_(color, condición) que actúa de forma similar al
+    anterior, pero ahora sacando bolitas si la condición se cumple.
+
+    c) BIBLIOTECA. Escribir el procedimiento Mover_Si_(dirección, condición) que actúa de forma similar a
+    los anteriores, pero ahora moviendo solo sí se cumple la condición dada..
+
+    d) ¿Que beneficios trae tener los procedimientos Sacar_Si_ y Poner_Si_ contra utilizar if en cada caso?
+*/
+

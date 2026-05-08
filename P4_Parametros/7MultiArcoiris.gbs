@@ -1,0 +1,139 @@
+/*
+Utilizando el procedimiento Pintar3Puntos_, construir el procedimiento PintarArcoIris() que ponga el tablero
+de la derecha cuando el tablero inicial es el de la izquierda. ¡A no ser como Nova, y empezar escribiendo el
+contrato!
+*/
+{
+    /*
+    Al continuar revisando el código, encontramos otro procedimiento de Nova que carece de contrato y no sigue
+    buenas prácticas de programación.
+
+    a) Escribir el contrato faltante y corregir las malas prácticas:
+
+    procedure Pintar3PuntosAzules() {
+    Poner(Azul)
+    Poner_ADistancia3Al_(Azul, Este)
+    Poner_ADistancia3Al_(Azul, Este)
+    Mover3VecesAl_(Oeste) Mover3VecesAl_(Oeste)
+    }
+    b) Ayudar a Nova a contestar la siguiente pregunta: ¿Hay alguna relación entre los parámetros de
+    Poner_ADistancia3Al_ y Mover3VecesAl_?
+    c) Dado que Nova no pensó en código general, basándose en el procedimiento corregido recién,
+    generalizarlo para que, dado un color colorPunto, dibuje los puntos de ese color. El nuevo procedimiento
+    debe llamarse Pintar3Puntos_.
+    */
+
+    procedure Pintar3PuntosAzules() {
+    /*
+        Propósito: Coloca 1 punto Azul en 3 celdas distanciadas por 2 celdas la una de la otra, partiendo de la celda inicial y 
+        luego regresa al inicio.
+        Precondiciones:
+            * Debe haber mínimo 6 celdas al Este de la celda inicial.
+    */
+    Poner(Azul)
+    Poner_ADistancia3Al_(Azul, Este)
+    Poner_ADistancia3Al_(Azul, Este)
+    Mover3VecesAl_(Oeste) 
+    Mover3VecesAl_(Oeste)
+    }
+
+    procedure Pintar3Puntos_(colorPunto){
+    /*
+        Propósito: Pinta 3 puntos de color *colorPunto* en 3 celdas distintas partiendo de la celda inicial. Cada una 
+        separada por una distancia de 2 celdas la una de la otra y partiendo en dirección *direccionPuntos* desde el inicio.
+        Luego, regresa a la celda inicial.
+        Precondiciones:
+            * Debe haber mínimo 6 celdas disponibles al *direccionPuntos* de la celda inicial.
+        Parámetros:
+            *colorPunto: Color - Es el color del cual vamos a colocar los puntos.
+            *direccionPuntos: Direccion - Es la dirección a la que vamos a colocar los puntos.
+    */
+
+    PintarPunto_(colorPunto)
+    repeat(2){
+        Poner_ADistancia3Al_(colorPunto, Este)
+    }
+    Volver6VecesAl_(Este)
+    }
+
+    procedure Volver6VecesAl_(direccionDeIda){
+    /*
+        Proposito: Vuelve el cabezal 6 celdas en la direccion contraria a la direccion *direccionDeIda*
+        Precondiciones:
+            * Debe haber mínimo 6 celdas a volver en direccion *direccionDeIda*
+        Parametros:
+            *direccionDeIda: Direccion - Es la direccion en la que se movió el cabezal anteriormente y de la que
+                queremos volver atrás.
+
+    */
+    repeat (2) {
+        Mover3VecesAl_(opuesto(direccionDeIda))
+    }
+}
+
+procedure PintarPunto_(colorDelPunto){
+    /*
+        Propósito: Pone una bolita de color *colorDelPunto* representando un punto con el dicho color.
+        Precondiciones: 
+            * Ninguna.
+        Parámetros:
+            *colorDelPunto: Color - Es el color con el cual vamos a pintar el punto
+    */
+    Poner(colorDelPunto)
+}
+
+program {
+    /*
+        PROPÓSITO:  ....
+        PRECONDICIONES:
+            * ....
+    */
+    Pintar3Puntos_(Azul, Norte)
+}
+}
+
+procedure PintarArcoiris(){
+    /*
+        Proposito: Pinta un arcoiris en un tablero.
+        Precondiciones:
+            * Debe haber mínimo 8 celdas de ancho y 2 de alto a partir de la celda inicial.
+            * Las celdas deben estar vacías.
+    */
+    Pintar3Puntos_(Negro),
+    MoverAPosicionDePuntosSiguientes()
+    Pintar3Puntos_(Azul),
+    MoverAPosicionDePuntosSiguientes()
+    Pintar3Puntos_(Rojo),
+    MoverAPosicionDePuntosVerdes()
+    Pintar3Puntos_(Verde),
+    MoverAPosicionDePuntosNegros()
+}
+
+procedure MoverAPosicionDePuntosSiguientes(){
+    /*
+        Proposito: Mueve el cabezal a la posición inicial de los puntos siguientes.
+        Precondiciones:
+            * El cabezal debe estar ubicado en la posicion inicial de los puntos Azules.
+    */
+    Mover(Este)
+}
+
+procedure MoverAPosicionDePuntosVerdes(){
+    /*
+        Proposito: Mueve el cabezal a la posición inicial de los puntos Verdes
+        Precondiciones:
+            * El cabezal debe estar ubicado en la posicion inicial de una serie de puntos.
+    */
+    Mover(Norte)
+    Mover(Oeste)
+}
+
+procedure MoverAPosicionDePuntosNegros(){
+    /*
+        Proposito: Mueve el cabezal a la posición inicial de los puntos Negros
+        Precondiciones:
+            * El cabezal debe estar ubicado en la posicion inicial de los puntos Verdes.
+    */
+    Mover(Sur)
+    Mover(Oeste)
+}

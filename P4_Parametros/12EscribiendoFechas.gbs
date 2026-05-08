@@ -1,0 +1,80 @@
+/*
+Construir un procedimiento EscribirFechaConDía_Mes_Año_(día, mes, año), que permita representar cualquier
+fecha dados el día, mes y año (como números). La representación debe ser la misma utilizada en el ejercicio
+anterior donde se registró el Día de la Memoria (Azul para el día, Rojo para el mes y Verde para el año, en tres
+celdas hacia el Este).
+¡Recordar! Debe comenzarse por escribir el contrato; en este caso puede resultar útil escribir también una
+observación con la representación a utilizar.
+*/
+
+procedure EscribirFechaConDia_Mes_Año_(dia, mes, anio){
+    /*
+        Proposito: Va a colocar la fecha *dia* / *mes* / *anio* en la celda actual.
+        Precondiciones:
+            * La celda debe estar vacía.
+        Parametros:
+            *dia: Numero - Indica el dia que se va ingresar en la celda.
+            *mes: Numero - Indica el mes que se va ingresar en la celda.
+            *anio: Numero - Indica el año que se va ingresar en la celda.
+    */
+    EscribirDia(dia)
+    EscribirMes(mes)
+    EscribirAnio(anio)
+}
+
+procedure EscribirDia(diaAEscribir){
+    /*
+        Proposito: Pone el dia *diaAEscribir* en la celda actual
+        Precondiciones:
+            * La celda actual debe estar vacía
+        Parametros:
+            *diaAEscribir: Numero - Indica el dia que se va ingresar en la celda.
+
+        Observaciones:
+            - El dia se va a representar con bolitas de color Azul
+    */
+    repeat (diaAEscribir) {
+        Poner(Azul)
+    }
+}
+
+procedure EscribirMes(mesAEscribir){
+    /*
+        Proposito: Pone el mes *mesAEscribir* en la celda actual
+        Precondiciones:
+            * La celda actual debe estar vacía
+        Parametros:
+            *mesAEscribir: Numero - Indica el mes que se va ingresar en la celda.
+
+        Observaciones:
+            - El mes se va a representar con bolitas de color Rojo
+    */
+    repeat (mesAEscribir) {
+        Poner(Rojo)
+    }
+}
+
+procedure EscribirAnio(anioAEscribir){
+    /*
+        Proposito: Pone el anio *anioAEscribir* en la celda actual
+        Precondiciones:
+            * La celda actual debe estar vacía
+        Parametros:
+            *anioAEscribir: Numero - Indica el año que se va ingresar en la celda.
+
+        Observaciones:
+            - El año se va a representar con bolitas de color Verde
+    */
+    repeat (anioAEscribir) {
+        Poner(Verde)
+    }
+}
+
+program {
+    /*
+        PROPÓSITO:  ....
+        PRECONDICIONES:
+            * ....
+    */
+    EscribirFechaConDia_Mes_Año_(3, 3, 2002)
+}
